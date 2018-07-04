@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 9</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        .container {
+        width: 85%;
+        height: auto;
+        margin: auto;
+        margin-top: 75px;
+        background-color: rgba(100, 100, 100, 0.2);
+        border-radius: 25px;
+        padding: 30px;
+        text-align: center;
+        font-family: Gotham, Arial, sans-serif
+      }
+      /* Game Title */
+      h1 {
+        font-size: 3em;
+      }
+      /* Section Styles */
+            section.statusShow {
+        height: 200px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: rgba(100, 100, 100, 0.2)
+      }
+      /* Word Conatiner */
+      .statusShowContainer {
+        color: red;
+        height: auto;
+        font-size: 7.5em;
+        
+        position: relative;
+        top: 15%;
+      }
+      /* Input Section */
+      .inputSection {
+        margin-bottom: 20px;
+      }
+      .startButton, .restartButton {
+        display: inline-block;
+        margin: auto;
+        margin-top: 35px
+      }
+      /* Progress Bar Container and Circle Span */
+      .progressContainer {
+        position: relative;
+        display: block;
+        margin: auto;
+        margin-top: 35px;
+        width: 85%;
+        height: 2px;
+        background-color: lightGrey;
+      }
+      #progressBar {
+      display: block;
+      position: absolute;
+      height: 10px;
+      width: 10px; 
+      top: -4px;
+      border-radius: 50%;
+      box-shadow: inset -15px -15px 50px lightBlue, 5px 4px 20px grey, inset 0px 0px 10px black;
+      background-color: red;
+      }
+            @media screen and (max-width: 768px) {
+        .wordDisplayContainer {
+          font-size: 3em;
+          top: 35%;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <header>
+                <h1 class="gameName">Type or Death</h1>
+            </header>
+            <div class="detailsDisplay">
+                <div class="levelDisplay">
+                    <p>Level <span id="level"></span></p>
+                </div>
+                <div class="scoreDisplay">
+                    <p>Your score is: <span id="score">0</span> points</p>
+                </div>
+            </div>
+        </section>
+        <section class="statusShow">
+            <div class="statusShowContainer">
+                <span id="status">Ready?</span>
+            </div>
+        </section>
+        <section class="inputSection">
+            <label for="">
+                <span class="smallType">Type Words Here</span>
+                <input id="wordInput" type="text"></input>
+            </label>
+            <div class="buttons">
+                <button id="start" class="startButton" onclick="startGame()">Click to Start</button>
+                <button id="restart" class="restartButton" onclick="restartGame()">Restart</button>
+                <button id="end" class="restartButton" onclick="endGame()">End Game</button>
+            </div>
+        </section>
+    </div>
+    <script>
+        let words = ['cat', 'two', 'map', 'trap', 'flew', 'back', 'then', 'went', 'route', 'primed', 'climbed'];
+        /*score and level made dynamic here*/
+        let scoreSpan = document.querySelector('#score');    /*scorespan linked to html element*/
+        let score = 0;
+        scoreSpan.innerHTML = score;                         /*score value sent to html element*/
+        let levelSpan = document.querySelector('#level');    /*levelspan linked to html element*/
+        let level = 1;
+        levelSpan.innerHTML = level;                         /*level value sent to html element*/
+        /*buttons declared*/
+        let input = document.querySelector('#wordInput');
+        let startBtn = document.querySelector('#start');
+        let display = document.querySelector('#words');
+        /*start button function*/
+        function startGame() {
+            alert("hold on!!!!!.");
+            }
+        function playGame() {
+            let playing = true;
+            if (playing) {
+                let restart = document.querySelector('#restart');
+                let end = document.querySelector('#end');
+                  };
+                if (restart === 'clicked') {
+                    display.innerHTML = 'Ready?';
+                    return;
+                }
+            return; 
+            }
+        /*restart button */
+        function restartGame() {
+            score = 0;
+            scoreSpan.innerHTML = score;
+            alert(" not defined.");
+            startGame();
+            return score;
+            }
+        /*end game button*/
+        function endGame() {
+            playing = false;
+            alert("Be sure first!!!!!!");
+        }
+    </script>
+</body>
+</html>
